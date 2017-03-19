@@ -21,9 +21,9 @@ void LayoutData::add_operation(uint16_t data_property_ind, std::initializer_list
 }
 
 void LayoutData::process() {
-	auto *arr_elements = elements.arr;
-	auto *arr_ops = op_cache.arr;
-	auto *arr_operations = operations.arr;
+	auto *arr_elements = elements.unsafe_ptr();
+	auto *arr_ops = op_cache.unsafe_ptr();
+	auto *arr_operations = operations.unsafe_ptr();
 	for (uint16_t i=0, n=operations.get_n(); i < n; ++i) {
 		arr_operations[i].process(arr_elements, arr_ops);
 	}

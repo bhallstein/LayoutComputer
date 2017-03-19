@@ -60,15 +60,15 @@ int main() {
 	);
 
 	layout_data.process();
-	printf("%.1f\n", layout_data.elements.arr[0]);
-	printf("%.1f\n", layout_data.elements.arr[1]);
-	printf("%.1f\n", layout_data.elements.arr[2]);
-	printf("%.1f\n\n", layout_data.elements.arr[3]);
+	printf("%.1f\n", layout_data.elements[0]);
+	printf("%.1f\n", layout_data.elements[1]);
+	printf("%.1f\n", layout_data.elements[2]);
+	printf("%.1f\n\n", layout_data.elements[3]);
 	
-	printf("%.1f\n", layout_data.elements.arr[4]);
-	printf("%.1f\n", layout_data.elements.arr[5]);
-	printf("%.1f\n", layout_data.elements.arr[6]);
-	printf("%.1f\n", layout_data.elements.arr[7]);
+	printf("%.1f\n", layout_data.elements[4]);
+	printf("%.1f\n", layout_data.elements[5]);
+	printf("%.1f\n", layout_data.elements[6]);
+	printf("%.1f\n", layout_data.elements[7]);
 
 	// N.B. This is a little different from Reverse Polish Notation because of the presence of an extra 'value' field.
 	// The field essentially acts as the top of the stack, so reducing the number of pops & pushes.
