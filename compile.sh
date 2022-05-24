@@ -1,12 +1,11 @@
 clang++ \
-  main.cpp LayoutComputer/*.cpp \
+  main.cpp \
   -Os \
-  -I . \
   -std=c++11 \
   -o layout
 
 if [ $? -eq 0 ]; then
-  echo "Compiled successfully."; echo
+  echo "Compiled :)"; echo
   if [ $# -eq 1 ] && [ $1 == "r" ]; then
     ./layout
   fi
